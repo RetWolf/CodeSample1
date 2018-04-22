@@ -14,7 +14,7 @@ Views are currently rendered using Pug. I was comfortable with Pug prior to star
 is deployed and functioning, I plan on switching to React and SCSS over the current Pug and CSS. 
 
 ## What is where?
-User Authentication etc -- routes/users.js
-Database Schemas -- models
-Searching Database based on user input -- routes/dashboard.js
-Styling -- public/stylesheets/style.css
+User Authentication etc -- routes/users.js  
+Database Schemas -- models  
+Searching Database based on user input -- routes/dashboard.js  
+Styling -- public/stylesheets/style.css  
