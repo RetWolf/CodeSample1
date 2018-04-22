@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Search Results
+  -if(results.type=='place')
+    ul
+    for item, i in results.data
+      li=`${item.title} - ${item.addr}, ${item.town}`
+  -if(results.type=='item')
+    ul
+    for item, i in results.data
+      li=`${item.name} - \$${item.price.toFixed(2)}`

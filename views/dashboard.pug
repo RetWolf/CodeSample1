@@ -1,0 +1,47 @@
+extends layout
+
+block content
+    div.dashboard-Grid-Container
+      div.dashboard-Header-Logo
+        //insert image here
+        h1 QuickBites
+      div.dashboard-Header-Welcome  
+        h2=`Welcome ${user.name}`
+      div.dashboard-Header-Account
+        h2 Account Settings
+        div.dashboard-Account-Nav
+          a#accountSettings(href="/users/settings") Settings
+          a#logoutBtn(href="/users/logout") Logout
+      div.dashboard-Content-LeftAd
+        //h3 Ads
+      div.dashboard-Content-SectionLeft
+        h2 Recent Orders
+        div.dashboard-SectionLeft-CardContainer
+          div.dashboard-SectionLeft-CardTop
+            h3 Recent Order 1
+            a(href="#") Buy
+          div.dashboard-SectionLeft-CardBottom
+            h3 Recent Order 2
+            a(href="#") Buy
+      div.dashboard-Content-SectionRight
+        h2 New Order
+        div.dashboard-SectionRight-CardContainer
+          div.dashboard-SectionRight-CardTop
+            form(action="/dashboard/search/places" method="post")
+              input(type="text" id="searchPlace" name="searchPlace" placeholder="McDonalds")
+              input(type="submit" value="Go" )
+          div.dashboard-SectionRight-CardBottom
+            form(action="/dashboard/search/items" method="post")
+              input(type="text" id="searchPlace" name="searchItem" placeholder="McChicken")
+              input(type="submit" value="Go" )
+      div.dashboard-Content-Bottom
+        //Will add to this
+        h1 Explore - Coming Soon
+      div.dashboard-Content-RightAd
+          //h3 Ads
+      div.dashboard-Footer-Left
+        p 
+      div.dashboard-Footer-Center
+        p Matt Conway --- Ian Fabricatore &copy; 2018
+      div.dashboard-Footer-Right
+        p 

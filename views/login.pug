@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  div.grid-Container-Short
+    h1(class='centered-Title-Short')=title
+    nav.grid-Nav-TopLeft
+      a.navLink(href = '/') Home
+      a.navLink(href = '/users/register') Register
+    section.grid-Centered-Section
+      div.form-Styling
+        form(action="/users/login" method="post")
+          label(for="email") Email
+          input(type="email" id="email" name="email" placeholder="Email")
+          label(for="password") Password
+          input(type="password" id="password" name="password" placeholder="Password")    
+          button(type="submit") Submit
+    footer.centered-Footer-Short
+      p Ian Fabs/Matt Conway &copy 2018

@@ -1,0 +1,9 @@
+extends dashboard
+
+block main
+  div.clear
+    h1= `${place.title} Menu`
+    ul
+    for items, i in menu
+      li
+        b=`${items.name} - ${items.desc}`

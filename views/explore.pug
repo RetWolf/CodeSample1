@@ -1,0 +1,12 @@
+extends dashboard
+
+block main
+  div.clear
+    h3 Explore hand-picked locations
+      ul
+      for place, index in places
+        li
+          a(href=`/dashboard/place/${place.name}`)
+            b=`${place.title} `
+          |in
+          text=` ${place.town}`
